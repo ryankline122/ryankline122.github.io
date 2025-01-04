@@ -1,0 +1,23 @@
+<div class="relative inline-block text-left">
+    <button class="inline-flex justify-center bg-transparent pt-0 text-neutral-950 hover:text-turquoise-blue-400" (click)="toggleDDL()">
+    Dropdown
+      <svg
+        class="ml-2 w-5 h-5 transition-transform duration-200"
+        [class.rotate-180]="isActive"
+        xmlns="<http://www.w3.org/2000/svg>"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M19 9l-7 7-7-7" />
+      </svg>
+    </button>
+
+    <div [class.hidden]="!isActive" class="absolute z-10 right-0 mt-2 w-36 origin-top-right bg-white border border-gray-200" id="ddl-contents">
+      <div class="py-1">
+        <a href="#" class="hover:text-turquoise-blue-400 block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Link 5</a>
+        <a href="#" class="hover:text-turquoise-blue-400 block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Link 6</a>
+        <a href="#" class="hover:text-turquoise-blue-400 block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Link 7</a>
+      </div>
+    </div>
+</div>

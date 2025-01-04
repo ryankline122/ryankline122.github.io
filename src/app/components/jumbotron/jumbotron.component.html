@@ -1,0 +1,19 @@
+<div class="relative flex justify-center items-center border-b-2 h-[90vh]">
+  <div class="absolute inset-0 bg-cover bg-center opacity-50"
+       [style.backgroundImage]="'url(assets/images/jumbotron.jpg)'"></div>
+  <div class="relative z-10 text-center">
+    <h1 class="text-7xl font-serif font-semibold">{{title}}</h1>
+    <p class="text-lg pt-3">{{subtitle}}</p>
+
+    <div class="mt-3">
+      <button (click)="downloadFile('assets/documents/Ryan-Kline-Resume-Public.pdf')">Download Resume</button>
+      <button class="ml-2 bg-turquoise-blue-500" 
+      (keydown.enter)="scrollToSection('contact')" 
+      tabindex="0"
+      role="button"
+      (click)="scrollToSection('contact')">
+      Contact
+      </button>
+    </div>
+  </div>
+</div>

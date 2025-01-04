@@ -1,0 +1,18 @@
+.name {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.name-spacer{
+    padding: 0;
+    margin: .4rem;
+}
+
+.subtitle {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.navbar-brand {
+    cursor: pointer;
+}

@@ -1,0 +1,25 @@
+<app-nav></app-nav>
+<div>
+    <div class="container pt-5 my-5">
+        <div class="about align-items-center justify-content-center mt-5">
+            <h2 class="text-center" id="about">Professional Experience</h2>
+            <hr>
+            <p>
+                Over the last two years of working in the industry, I've had the opportunity to work on a wide variety of projects 
+                ranging from an automated test suite for an autonomous robot, a web-based member portal 
+                for large health care provider, a data center management system for a global furniture manufacturer, and a 
+                cloud-based back-end of an innovative Parking Access and Revenue Control product. This breadth of experience so early in my career puts me in 
+                a unique position to confidently tackle whatever project comes my way.
+            </p>
+
+            <br>
+            @for (experience of workExperiences; track $index) {
+                <app-experience
+                    [exp]=experience
+                ></app-experience>
+            }
+        </div>
+        <br>
+        <hr>
+    </div>
+</div>

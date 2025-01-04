@@ -1,0 +1,37 @@
+.profile-picture{
+    width: 25rem;
+    height: 25rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.picture-container {
+    margin-top: 100rem;
+}
+
+#intro-container {
+    margin-top: 15rem;
+}
+
+#intro {
+    margin-top: 5rem;
+}
+
+img {
+    height: 100%;
+    width: auto;
+}
+
+@media (max-width: 995px) {
+
+    #intro-container {
+        margin-top: 10rem;
+    }
+
+    .profile-picture {
+      margin-top: 5rem;
+      width: 20rem;
+      height: 20rem;
+    }
+}

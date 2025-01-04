@@ -1,0 +1,90 @@
+<div class="flex relative items-center justify-between w-full py-3 px-5 bg-white border-b-2 border-slate-200">
+    <div class="text-center">
+        <h1 class="text-3xl font-serif"><a href="/">RK</a></h1>
+    </div>
+
+    <nav class="hidden gap-5 md:flex">
+        <a (click)="scrollToSection('home')" 
+        (keydown.enter)="scrollToSection('home')"
+        tabindex="0" 
+        role="button" 
+        class="hover:text-turquoise-blue-400">Home</a>
+        <a (click)="scrollToSection('about')" 
+        (keydown.enter)="scrollToSection('about')"
+        tabindex="0" 
+        role="button" 
+        class="hover:text-turquoise-blue-400">About</a>
+        <a (click)="scrollToSection('featured')" 
+        (keydown.enter)="scrollToSection('featured')"
+        tabindex="0" 
+        role="button" 
+        class="hover:text-turquoise-blue-400">Featured Work</a>
+        @if (blogActive) {
+            <a href="#" class="hover:text-turquoise-blue-400">Blog</a>
+        }
+        <a (click)="scrollToSection('contact')" 
+        (keydown.enter)="scrollToSection('contact')"
+        tabindex="0" 
+        role="button" 
+        class="hover:text-turquoise-blue-400">Contact</a>
+    </nav>
+    
+    <div class="md:hidden" 
+    (keydown.enter)="toggleMenu()"
+    tabindex="0" 
+    role="button" 
+    (click)="toggleMenu()">
+        @if (!isMobileMenuActive) {
+            <svg id="menuSVG" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        } @else {
+            <svg id="closeSVG" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        }
+
+    </div>
+</div>
+
+@if (isMobileMenuActive) {
+    <div id="menuItems" class="flex flex-col bg-slate-900 opacity-70 text-center p-3 gap-3 text-lg text-slate-200">
+        <div>
+            <a 
+            (click)="scrollToSection('home')" 
+            (keydown.enter)="scrollToSection('home')"
+            tabindex="0" 
+            role="button" 
+            class="hover:text-turquoise-blue-400">Home</a>
+        </div>
+
+        <div>
+            <a (click)="scrollToSection('about')" 
+            (keydown.enter)="scrollToSection('about')"
+            tabindex="0" 
+            role="button" 
+            class="hover:text-turquoise-blue-400">About</a>
+        </div>
+
+        <div>
+            <a (click)="scrollToSection('featured')"
+            (keydown.enter)="scrollToSection('featured')"
+            tabindex="0" 
+            role="button" 
+            class="hover:text-turquoise-blue-400">Featured Work</a>
+        </div>
+
+        @if (blogActive) {
+            <div>
+                <a href="#" class="hover:text-turquoise-blue-400">Blog</a>
+            </div>
+        }
+        <div class="hover:cursor-pointer">
+            <a (click)="scrollToSection('contact')"
+                (keydown.enter)="scrollToSection('contact')"
+                tabindex="0" 
+                role="button"
+                class="hover:text-turquoise-blue-400 scroll-smooth">Contact</a>
+        </div>
+    </div>
+}

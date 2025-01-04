@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-slate-100
+    }
+    button {
+        @apply bg-turquoise-blue-500 px-2 py-1 text-white rounded-xl 
+    }
+
+    button:hover {
+        @apply bg-turquoise-blue-700
+    }
+
+    a:hover {
+       @apply text-turquoise-blue-500
+    }
+}
